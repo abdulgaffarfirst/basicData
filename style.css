@@ -1,0 +1,126 @@
+/* General Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #09361d;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #1c6800;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+h2 {
+  color: #fff70b;
+  border: 5px solid #00ff00;
+  border-radius: 20px;
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+/* Beautiful Placeholder Styling */
+input::placeholder {
+  color: #95a5a6;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  opacity: 1; /* Firefox reduces opacity by default */
+  transition: all 0.3s ease;
+}
+
+input:focus::placeholder {
+  color: #bdc3c7;
+  transform: translateX(5px);
+}
+
+input[type="submit"] {
+  background-color: #02d35b;
+  color: #0043ff;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s;
+  letter-spacing: 1px;
+}
+
+input[type="submit"]:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  input {
+    padding: 12px;
+  }
+  
+  input::placeholder {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+  
+  .container {
+    padding: 10px;
+  }
+  
+  h2 {
+    font-size: 1.3rem;
+  }
+  
+  input {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+  
+  input::placeholder {
+    font-size: 0.85rem;
+    letter-spacing: normal;
+  }
+}
