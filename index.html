@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>মোবাইল রিচার্জ</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- গুগল বাংলা ফন্ট -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="container">
+    <h2>মোবাইল রিচার্জ ফর্ম</h2>
+    <form onsubmit="return handleSubmit(event)" name="contact-form">
+      
+      <label for="name">আপনার নাম:</label>
+      <input type="text" id="name" name="Name" placeholder="নাম লিখুন" required>
+
+      <label for="number">মোবাইল নাম্বার:</label>
+      <input type="number" id="number" name="Number" placeholder="01XXXXXXXXX" required>
+
+      <label for="email">ই-মেইল:</label>
+      <input type="email" id="email" name="Email" placeholder="example@email.com" required>
+
+      <label for="number">গ্রামের নাম:</label>
+      <input type="text" id="number" name="Village" placeholder="গ্রামের নাম লিখুন" required>
+
+      <label for="number">থানার নাম:</label>
+      <input type="text" id="number" name="Thana" placeholder="থানার নাম লিখুন" required>
+
+      <label for="number">জেলার নাম:</label>
+      <input type="text" id="number" name="District" placeholder="জেলার নাম লিখুন" required>
+
+      <label for="dob">জন্ম তারিখ:</label>
+      <input type="date" id="dob" name="DOB" required>
+
+      <label for="age">আপনার বয়স :</label>
+      <input type="number" id="age" name="Age" readonly placeholder="উপরের জন্ম তারিখ দিলে স্বয়ংক্রিয়ভাবে দেখাবে আপনার বয়স কত">
+
+
+      <label for="operator">রক্তের গ্রুপ:</label>
+      <select name="Blood Group" required>
+        <option value="">ব্লাড গ্রুপ নির্বাচন করুন</option>
+        <option value="A+">A+</option>
+        <option value="A-">A-</option>
+        <option value="B+">B+</option>
+        <option value="B-">B-</option>
+        <option value="AB+">AB+</option>
+        <option value="AB-">AB-</option>
+        <option value="O+">O+</option>
+        <option value="O-">O-</option>
+        <option value="O-">জানি না</option>
+      </select>
+
+      <label for="operator">অপারেটর:</label>
+      <select id="operator" name="operator" required>
+        <option value="">-- অপারেটর নির্বাচন করুন --</option>
+        <option value="Grameenphone">গ্রামীণফোন</option>
+        <option value="Robi">রবি</option>
+        <option value="Banglalink">বাংলালিংক</option>
+        <option value="Teletalk">টেলিটক</option>
+        <option value="Airtel">এয়ারটেল</option>
+      </select>
+
+      <label for="amount">রিচার্জ পরিমাণ (৳):</label>
+      <input type="number" id="amount" name="Amount" placeholder="যেমনঃ ৫০" required>
+
+      <button id="submitBtn" type="submit">সাবমিট</button>
+
+    </form>
+
+    <div id="message" style="display: none; margin-top: 10px; padding: 10px; border-radius: 5px; font-weight: bold;"></div>
+
+  </div>
+
+
+  <!-- সাবমিট স্ট্যাটাস দেখানোর জন্য -->
+  
+
+
+  <script src="script.js"></script>
+</body>
+</html>
